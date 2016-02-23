@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Drive Ville</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">User name</string>
+    <string name="user_pic_alt">User Picture</string>
+    <string name="miles">Miles</string>
+    <string name="speed_title_str">Speed</string>
+    <string name="accel_title_str">Acceleration / Braking</string>
+    <string name="overall_metric">Overall</string>
+</resources>

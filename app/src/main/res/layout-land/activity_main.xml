@@ -1,0 +1,209 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rellayout">
+
+        <LinearLayout
+            android:id="@+id/linearlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:gravity = "center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.1"
+                android:layout_gravity="left"
+                android:background="@android:color/black"/>
+
+            <ImageView
+                android:id="@+id/user_pic"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/user_pic_alt"
+                android:src="@drawable/girl_photo_cut" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_content"
+                android:textSize="30sp"
+                android:layout_marginLeft="50dp"
+                android:layout_gravity="bottom"
+                android:fontFamily="sans-serif-thin"
+                android:textColor="@android:color/white"/>
+
+            <View
+                android:gravity = "center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_weight="0.8"
+                android:layout_gravity="right"
+                android:background="@android:color/black"/>
+            <ImageView
+                android:id="@+id/voice_search"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="bottom"
+                android:contentDescription="@string/user_pic_alt"
+                android:src="@drawable/voice_search" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_gravity = "center"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/linearlayout1"
+            android:background="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/overall_ui"
+        android:orientation="horizontal"
+        android:layout_below="@id/rellayout"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/real_ui"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="0.7"
+        android:gravity="top|left"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/accel_title"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:text="@string/accel_title_str"/>
+
+            <View
+                android:id="@+id/accel"
+                android:layout_gravity = "left"
+                android:layout_width="400dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@android:color/holo_green_dark"/>
+
+        <TextView
+            android:id="@+id/speed_title"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:text="@string/speed_title_str"/>
+        <View
+            android:id="@+id/speed_bar"
+            android:layout_gravity = "left"
+            android:layout_width="500dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/speed_title"
+            android:background="@android:color/holo_purple"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/text_disp"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="0.3"
+        android:gravity="right"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/miles_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:layout_gravity = "end"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="50sp"
+        android:text="@string/miles"/>
+
+
+
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. #33b5e5-->
+
+     </LinearLayout>
+     </LinearLayout>
+
+    <TextView
+        android:id="@+id/overall_bar_title"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity = "center|bottom"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:text="@string/overall_metric"/>
+    <View
+        android:id="@+id/overall_bar"
+        android:layout_gravity = "center|bottom"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/overall_ui"
+        android:background="@android:color/holo_red_light"/>
+
+    <TextView android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/miles_text"
+        android:keepScreenOn="true"
+        android:textColor="#0099cc"
+        android:textSize="50sp"
+        android:layout_marginTop="10dp"
+        android:gravity="bottom|right"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/app_name" />
+
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+                android:textStyle="bold"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+
+        </LinearLayout>
+    </FrameLayout>
+-->
+</LinearLayout>
